@@ -9,8 +9,10 @@ import {
 } from '@/components/ui/dropdown-menu';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const StickyHeader = () => {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -134,7 +136,7 @@ const StickyHeader = () => {
                   key={item.name}
                   href={item.href}
                   className={`font-medium transition-colors duration-200 text-xs h-full flex items-center ${
-                    index === 0 ? 'text-green-111' : 'text-gray-700 hover:text-green-111'
+                    pathname === item.href ? 'text-green-111' : 'text-gray-700 hover:text-green-111'
                   }`}
                 >
                   {item.name}

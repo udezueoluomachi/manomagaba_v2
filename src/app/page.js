@@ -1,8 +1,8 @@
 "use client";
 import { Oswald } from "next/font/google";
 import StickyHeader from "./components/header";
-
-
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect } from 'react';
 
 const oswald = Oswald({
@@ -170,6 +170,68 @@ return (
           }
         `}</style>
       </div>
+      <section className="py-16 lg:py-36 px-4 md:px-8 lg:px-36 max-w-[88rem] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          {/* Text Content */}
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <p className="text-sm text-gray-600 tracking-wider uppercase font-bold">
+                OUR STORY
+              </p>
+              <h1 className={`text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight ${oswald.className}`}>
+                We Are Revolutionalizing Agriculture in Nigeria.
+              </h1>
+            </div>
+            
+            <div className="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                Manoma Gaba is a non-profit social enterprise committed to shaping 
+                the future of agriculture in Nigeria. At Manoma Gaba, we are 
+                dedicated to creating a ripple effect, with millions of young agricultural 
+                innovators and resilient smallholder farmers leading the 
+                transformation of Nigeria's agriculture sector. They will not only feed 
+                the nation but also drive climate-smart practices, strengthen food 
+                security, and contribute to global efforts in achieving sustainable 
+                agriculture and climate resilience.
+              </p>
+              
+              <p>
+                Our aim is to make Nigeria a model for agricultural excellence and 
+                environmental stewardship, where agriculture becomes a driving 
+                force for economic, social, and environmental sustainability, benefiting 
+                all, especially vulnerable members of society.
+              </p>
+            </div>
+            
+            <Link href="/about" className="bg-gray-800 text-green-111 px-8 py-3 text-sm font-medium tracking-wider uppercase hover:bg-gray-700 transition-colors duration-300">
+              READ MORE ABOUT US
+            </Link>
+          </div>
+
+          {/* Image Content */}
+          <div className="relative">
+            {/* Green background div */}
+            <div className="absolute -top-6 -left-6 w-1/2 h-full bg-green-111"></div>
+            
+            {/* Image container */}
+            <div className="relative z-10 overflow-hidden">
+              <Image 
+                src={"/images/face-of-gaba.jpeg"}
+                alt="Farmer in field" width={300} height={500}
+                className="w-11/12 h-[400px] md:h-[500px] object-cover"
+              />
+              {/* Green overlay with text */}
+              <div className="absolute w-full top-16 -right-10 z-50">
+                <div className="bg-green-111 text-white px-6 py-3 text-center">
+                  <h2 className={`text-xl font-medium tracking-[0.8em] ${oswald.className}`}>
+                    MANOMA GABA
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
