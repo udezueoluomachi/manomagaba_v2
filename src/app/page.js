@@ -233,6 +233,18 @@ return (
           </div>
         </div>
       </section>
+      <section className="w-full min-h-[80vh] relative bg-fixed bg-center bg-cover bg-[url('/images/farmer-2021-09-04-11-42-50-utc.jpg')]">
+        <div className="absolute inset-0 flex items-center flex-col bg-black/40 text-white text-center px-4 py-36">
+          <div className="max-w-2xl">
+            <h2 className="text-sm font-bold uppercase tracking-wider ">WHAT WE DO</h2>
+            <h3 className={"text-4xl font-medium mt-5 " + oswald.className}>We Are Helping Farmers Advance Their Agricultural Endeavours.</h3>
+            <p className="text-base font-normal mt-10">We focus on strengthening food security by empowering smallholder farmers and mentoring the next generation of agricultural leaders.</p>
+            <Link href={"#whatwedo"} className="text-base uppercase p-4 bg-green-111 hover:bg-black-111 block w-max mt-10 mx-auto md:px-10" >
+            LEARN MORE
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
