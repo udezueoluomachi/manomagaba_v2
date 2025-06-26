@@ -42,7 +42,7 @@ const StickyHeader = () => {
         }`}
       >
         <div className="px-4 lg:px-36">
-          <div className="flex items-center justify-between py-2 text-sm">
+          <div className="flex items-center justify-between py-6 text-sm">
             {/* Left side contact info */}
             <div className="flex items-center space-x-6 text-xs border-x-2 border-x-black-222 px-3">
               <a
@@ -98,7 +98,7 @@ const StickyHeader = () => {
       </div>
 
       {/* Main White Header - Always Sticky */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+      <header className="bg-white shadow-sm sticky top-0 z-50 header-white py-1">
         {/* Green Progress Bar at Top */}
         <div className="fixed top-0 left-0 w-full h-1 bg-black/20 z-50">
           <div

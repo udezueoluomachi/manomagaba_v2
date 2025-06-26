@@ -1,9 +1,15 @@
 "use client";
+import { Oswald } from "next/font/google";
 import Image from "next/image";
 import StickyHeader from "./components/header";
 
 
 import React, { useState, useEffect } from 'react';
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+});
 
 const ManomaGabaLanding = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -72,23 +78,29 @@ return (
           <div className="px-8 md:px-36 py-20 w-full">
             {/* Brand Header */}
             <div className="mb-8">
-              <div className="text-green-111 text-2xl font-bold mb-2">
+              <div className="w-max">
+              <div className="w-full flex items-end">
+              <div className="w-4/12 h-1 bg-green-111 mb-4"></div>
+              <div className="w-8/12 h-[0.5px] bg-white/55 mb-4"></div>
+              </div>
+              <div className="text-green-111 text-lg font-bold mb-2">
                 MANOMA GABA
               </div>
-              <div className="text-gray-200 text-lg max-w-2xl">
+              </div>
+              <div className="text-gray-200 text-sm max-w-2xl">
                 Bridging food security by frontiering the NextGen AgriLeaders, as well as empowering small holder farmers
               </div>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-6xl md:text-7xl font-black text-white uppercase leading-tight mb-8">
+            <h1 className={"text-3xl md:text-5xl font-black text-white uppercase leading-tight mb-8 " + oswald.className}>
               SOCIAL ENTERPRISE<br />
               <span className="text-green-111">REVOLUTIONALIZING</span><br />
               AGRICULTURE IN NIGERIA
             </h1>
 
             {/* Mission Text */}
-            <p className="text-gray-200 text-xl max-w-2xl leading-relaxed mb-16">
+            <p className="text-gray-200 text-base max-w-2xl leading-relaxed mb-16">
               Our mission is to empower one million NextGen AgriLeaders and smallholder 
               farmers with the knowledge, tools, and opportunities to thrive in a climate-
               resilient agricultural sector.
@@ -96,22 +108,22 @@ return (
 
             {/* Bottom Controls Container */}
             <div className="flex justify-between items-end w-full">
-              {/* Simple Scroll Indicator - Bottom Left */}
+              {/* Updated Scroll Indicator with Caret and Moving Dot */}
               <div className="flex-shrink-0">
                 <button
                   onClick={handleScrollDown}
                   className="flex flex-col items-center space-y-2 text-white/80 hover:text-white transition-all duration-300 group"
                 >
-                  <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center group-hover:border-green-111/60 transition-colors duration-300">
-                    <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce group-hover:bg-green-111/80" />
+                  <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center group-hover:border-green-111/60 transition-colors duration-300 relative overflow-hidden">
+                    <div className="w-1.5 h-1.5 bg-green-111 rounded-full absolute animate-scroll-dot" />
                   </div>
+                  {/* Caret instead of arrow */}
                   <svg 
                     className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" 
-                    fill="none" 
-                    stroke="currentColor" 
+                    fill="currentColor" 
                     viewBox="0 0 24 24"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    <path d="M7 10l5 5 5-5H7z"/>
                   </svg>
                 </button>
               </div>
