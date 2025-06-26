@@ -1,6 +1,5 @@
 "use client";
 import { Oswald } from "next/font/google";
-import Image from "next/image";
 import StickyHeader from "./components/header";
 
 
@@ -115,7 +114,7 @@ return (
                   className="flex flex-col items-center space-y-2 text-white/80 hover:text-white transition-all duration-300 group"
                 >
                   <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center group-hover:border-green-111/60 transition-colors duration-300 relative overflow-hidden">
-                    <div className="w-1.5 h-1.5 bg-green-111 rounded-full absolute animate-scroll-dot" />
+                    <div className="w-1.5 h-1.5 bg-green-111 rounded-full absolute animate-scroll-dot transition-all z-20" />
                   </div>
                   {/* Caret instead of arrow */}
                   <svg 
@@ -153,13 +152,21 @@ return (
         {/* Custom CSS for zoom animation */}
         <style jsx>{`
           @keyframes zoom {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            0% { transform: scale(1.1); }
+            50% { transform: scale(1.25); }
             100% { transform: scale(1); }
+          }
+            @keyframes scroll-dot {
+            0% { top: 8px; opacity: 1; }
+            100% { top: 39px; opacity: 0;}
           }
           
           .animate-zoom {
             animation: zoom 12s ease-in-out infinite;
+          }
+          
+          .animate-scroll-dot {
+            animation: scroll-dot 1.6s ease-in-out infinite;
           }
         `}</style>
       </div>

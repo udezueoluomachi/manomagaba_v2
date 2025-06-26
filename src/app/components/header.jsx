@@ -42,7 +42,7 @@ const StickyHeader = () => {
         }`}
       >
         <div className="px-4 lg:px-36">
-          <div className="flex items-center justify-between py-6 text-sm">
+          <div className="hidden lg:flex items-center justify-between py-6 text-sm">
             {/* Left side contact info */}
             <div className="flex items-center space-x-6 text-xs border-x-2 border-x-black-222 px-3">
               <a
@@ -94,6 +94,20 @@ const StickyHeader = () => {
               </Link>
             </div>
           </div>
+          <div className="flex lg:hidden items-center justify-between py-6 text-sm">
+            {/* Left side contact info */}
+            <div className="flex items-center space-x-6 text-xs border-x-2 border-x-black-222 px-3">
+              <Link
+                href="/contact"
+                className="group flex items-center space-x-2 transition-all hover:text-green-111"
+              >
+                <Mail className="h-4 w-4 text-green-111 group-hover:text-white transition-all" />
+                <span className="text-white group-hover:text-green-111 transition-all">
+                  OUR CONTACT
+                </span>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -127,11 +141,11 @@ const StickyHeader = () => {
                 </a>
               ))}
               <div className="flex items-center space-x-2 border-l pl-4">
-                <Megaphone className="text-green-111" />
+                <Megaphone className="text-black-111" />
               </div>
-              <button className="bg-green-111 h-full text-black-111 text-xs px-6 py-2 rounded font-medium flex items-center">
+              <Link href={"/contact"} className="bg-green-111 h-full text-black-111 text-xs px-6 py-2 rounded font-medium flex items-center">
                 GET IN TOUCH
-              </button>
+              </Link>
             </nav>
 
             {/* Mobile Menu */}
@@ -142,7 +156,7 @@ const StickyHeader = () => {
                     <Menu className="h-6 w-6" />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-64 mt-2 bg-gray-800 text-white border-none">
+                <DropdownMenuContent align="end" className="w-64 mt-2 bg-black-111 text-white border-none">
                   <div className="py-2">
                     {navigationItems.map((item) => (
                       <a
