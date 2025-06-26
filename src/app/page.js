@@ -4,11 +4,94 @@ import StickyHeader from "./components/header";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from 'react';
+import { Users, Tractor, CreditCard, TrendingUp } from 'lucide-react';
 
 const oswald = Oswald({
   variable: "--font-oswald",
   subsets: ["latin"],
 });
+
+const StrategyCard = ({ number, title, description, IconComponent }) => {
+  return (
+    <div className="relative h-80 w-full group cursor-pointer" style={{ perspective: '1000px' }}>
+      <div 
+        className="relative h-full w-full transition-transform duration-700 group-hover:rotate-y-180"
+        style={{ transformStyle: 'preserve-3d' }}
+      >
+        {/* Front of card */}
+        <div 
+          className="absolute inset-0 bg-white shadow-md p-8 flex flex-col"
+          style={{ backfaceVisibility: 'hidden' }}
+        >
+          <div className="flex items-center justify-between mb-6">
+            <div className="text-green-111">
+              <IconComponent size={40} strokeWidth={1.5} />
+            </div>
+            <div className="border-2 border-green-111 rounded-full w-8 h-8 flex items-center justify-center">
+              <span className="text-green-111 text-sm font-bold">
+                {number.padStart(2, '0')}
+              </span>
+            </div>
+          </div>
+          
+          {/* Green underline */}
+          <div className="w-12 h-1 bg-green-111 mb-6"></div>
+          
+          <h3 className={`text-2xl font-bold text-gray-900 mb-4 ${oswald.className}`}>
+            {title}
+          </h3>
+          
+          <p className="text-gray-600 text-base leading-relaxed flex-grow">
+            {description}
+          </p>
+          
+          {/* Bottom green line */}
+          <div className="w-16 h-1 bg-green-111 mt-6"></div>
+        </div>
+
+        {/* Back of card */}
+        <div 
+          className="absolute inset-0 bg-gray-400 shadow-md p-8 flex flex-col items-center justify-center"
+          style={{ 
+            backfaceVisibility: 'hidden',
+            transform: 'rotateY(180deg)'
+          }}
+        >
+          <Link href={"/about"} className="bg-green-111 hover:opacity-90 text-white px-8 py-3 rounded-md font-medium transition-colors duration-200 text-lg">
+            Read more
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const strategies = [
+  {
+    number: "1",
+    title: "Capacity Building",
+    description: "Training farmers to transition from subsistence to commercial farming.",
+    icon: Users
+  },
+  {
+    number: "2",
+    title: "Resilience",
+    description: "Promoting climate-smart agricultural practices to mitigate the impact of climate change.",
+    icon: Tractor
+  },
+  {
+    number: "3", 
+    title: "Inclusive Access",
+    description: "Facilitating access to credit, quality inputs, and modern farming technologies.",
+    icon: CreditCard
+  },
+  {
+    number: "4",
+    title: "Market Linkage", 
+    description: "Connecting farmers to profitable markets, ensuring sustainable livelihoods.",
+    icon: TrendingUp
+  }
+];
 
 const ManomaGabaLanding = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -245,6 +328,65 @@ return (
           </div>
         </div>
       </section>
+      <section id="whatwedo" className="relative">
+        {/* Gray background section */}
+        <div className="bg-gray-100 pt-16 pb-64">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Strategy header */}
+            <div className="mb-16">
+              <p className="text-gray-500 text-sm font-medium tracking-wider uppercase mb-4">
+                STRATEGY & APPROACH
+              </p>
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+                <h2 className={`text-4xl font-medium text-gray-900 lg:max-w-2xl ${oswald.className}`}>
+                  Our Strategic Objective are to:
+                </h2>
+                <div className="lg:max-w-md space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-black-111 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-600">
+                      Sustainably increase agricultural productivity and incomes for smallholder farmers.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-black-111 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-600">
+                      Build resilience to climate change through adaptive farming practices.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-black-111 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-600">
+                      Develop a new generation of AgriLeaders capable of transforming the agricultural landscape in Nigeria.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* White background section with overlapping cards */}
+        <div className="bg-white relative transform">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16  -translate-y-10">
+            {/* Strategy cards positioned to overlap gray section */}
+            <div className="relative -mt-48">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {strategies.map((strategy, index) => (
+                  <StrategyCard
+                    key={index}
+                    number={strategy.number}
+                    title={strategy.title}
+                    description={strategy.description}
+                    IconComponent={strategy.icon}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </>
   );
 }
