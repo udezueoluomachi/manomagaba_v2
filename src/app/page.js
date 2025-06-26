@@ -11,10 +11,10 @@ const ManomaGabaLanding = () => {
 
   // Background images - you can replace these with your actual image URLs
   const slides = [
-    'https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+    '/images/happy-african-farmer-working-in-the-countryside-ho-2021-09-03-16-05-20-utc.jpg',
+    '/images/shot-of-an-attractive-young-female-farmer-working-2022-10-05-18-46-35-utc.jpg',
+    '/images/t-of-an-attractive-young-female-far-2022-12-16-15-16-06-utc.jpg',
+    '/images/farmer-2021-09-04-11-42-50-utc.jpg'
   ];
 
   // Auto-play functionality
@@ -41,11 +41,11 @@ const ManomaGabaLanding = () => {
       behavior: 'smooth'
     });
   };
-
-  return (
+return (
     <>
       <StickyHeader />
-      <div className="relative h-screen overflow-hidden">
+
+      <div className="relative min-h-screen overflow-hidden">
         {/* Background Images with Instant Switch + Zoom */}
         <div className="absolute inset-0">
           {slides.map((slide, index) => (
@@ -68,11 +68,11 @@ const ManomaGabaLanding = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 h-full flex items-center">
-          <div className="max-w-6xl mx-auto px-8">
+        <div className="w-full relative z-10 min-h-screen flex items-center">
+          <div className="px-8 md:px-36 py-20 w-full">
             {/* Brand Header */}
             <div className="mb-8">
-              <div className="text-green-400 text-2xl font-bold mb-2">
+              <div className="text-green-111 text-2xl font-bold mb-2">
                 MANOMA GABA
               </div>
               <div className="text-gray-200 text-lg max-w-2xl">
@@ -83,56 +83,59 @@ const ManomaGabaLanding = () => {
             {/* Main Heading */}
             <h1 className="text-6xl md:text-7xl font-black text-white uppercase leading-tight mb-8">
               SOCIAL ENTERPRISE<br />
-              <span className="text-green-400">REVOLUTIONALIZING</span><br />
+              <span className="text-green-111">REVOLUTIONALIZING</span><br />
               AGRICULTURE IN NIGERIA
             </h1>
 
             {/* Mission Text */}
-            <p className="text-gray-200 text-xl max-w-2xl leading-relaxed">
+            <p className="text-gray-200 text-xl max-w-2xl leading-relaxed mb-16">
               Our mission is to empower one million NextGen AgriLeaders and smallholder 
               farmers with the knowledge, tools, and opportunities to thrive in a climate-
               resilient agricultural sector.
             </p>
-          </div>
-        </div>
 
-        {/* Slideshow Controls - Bottom Right */}
-        <div className="fixed bottom-8 right-16 flex items-center space-x-4 z-20">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-2 h-2 rounded-full border-2 backdrop-blur-md transition-all duration-500 ${
-                index === currentSlide
-                  ? 'w-4 h-4 border-green-400 bg-green-400/20 relative'
-                  : 'border-white/40 bg-white/10 hover:bg-white/20 hover:border-white/60'
-              }`}
-            >
-              {index === currentSlide && (
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full shadow-lg" />
-              )}
-            </button>
-          ))}
-        </div>
+            {/* Bottom Controls Container */}
+            <div className="flex justify-between items-end w-full">
+              {/* Simple Scroll Indicator - Bottom Left */}
+              <div className="flex-shrink-0">
+                <button
+                  onClick={handleScrollDown}
+                  className="flex flex-col items-center space-y-2 text-white/80 hover:text-white transition-all duration-300 group"
+                >
+                  <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center group-hover:border-green-111/60 transition-colors duration-300">
+                    <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce group-hover:bg-green-111/80" />
+                  </div>
+                  <svg 
+                    className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                </button>
+              </div>
 
-        {/* Simple Scroll Indicator - Bottom Center */}
-        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-          <button
-            onClick={handleScrollDown}
-            className="flex flex-col items-center space-y-2 text-white/80 hover:text-white transition-all duration-300 group"
-          >
-            <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce" />
+              {/* Slideshow Controls - Bottom Right */}
+              <div className="flex items-center space-x-4">
+                {slides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-2 h-2 cursor-pointer rounded-full backdrop-blur-md transition-all duration-500 ${
+                      index === currentSlide
+                        ? 'w-4 h-4 border-green-400 bg-green-400/20 relative'
+                        : 'bg-green-111 hover:bg-white/20 hover:border-2 hover:border-white/60'
+                    }`}
+                  >
+                    {index === currentSlide && (
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full shadow-lg" />
+                    )}
+                  </button>
+                ))}
+              </div>
             </div>
-            <svg 
-              className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </button>
+          </div>
         </div>
 
         {/* Custom CSS for zoom animation */}
@@ -150,6 +153,6 @@ const ManomaGabaLanding = () => {
       </div>
     </>
   );
-};
+}
 
 export default ManomaGabaLanding;
