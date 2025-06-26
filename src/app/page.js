@@ -102,7 +102,7 @@ return (
             <p className="text-gray-200 text-base max-w-2xl leading-relaxed mb-16">
               Our mission is to empower one million NextGen AgriLeaders and smallholder 
               farmers with the knowledge, tools, and opportunities to thrive in a climate-
-              resilient agricultural sector.
+              resilient agricultural sector&#39;.
             </p>
 
             {/* Bottom Controls Container */}
