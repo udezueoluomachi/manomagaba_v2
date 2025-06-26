@@ -170,7 +170,8 @@ return (
           }
         `}</style>
       </div>
-      <section className="py-16 lg:py-36 px-4 md:px-8 lg:px-36 max-w-[88rem] mx-auto">
+      <section className="py-16 lg:py-36 px-4 md:px-8 lg:px-36 max-w-[88rem] mx-auto relative">
+        <div className="absolute -left-16 -bottom-1/3 -translate-y-1/2 w-4/12 h-8/12 bg-gray-600/5 block -z-10"></div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Text Content */}
           <div className="space-y-6">
@@ -209,9 +210,9 @@ return (
           </div>
 
           {/* Image Content */}
-          <div className="relative">
+          <div className="relative mt-20 md:mt-0">
             {/* Green background div */}
-            <div className="absolute -top-6 -left-6 w-1/2 h-full bg-green-111"></div>
+            <div className="hidden md:block absolute -top-6 -left-6 w-1/2 h-full bg-green-111"></div>
             
             {/* Image container */}
             <div className="relative z-10 overflow-hidden">
