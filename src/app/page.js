@@ -386,7 +386,26 @@ return (
           </div>
         </div>
       </section>
-      
+      <section className="bg-black-111 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl">
+            {/* Section Label */}
+            <p className="text-green-500 text-sm font-medium tracking-wider uppercase mb-8">
+              OUR PROJECTS
+            </p>
+            
+            {/* Main Content */}
+            <h2 className={`text-white text-4xl leading-tight mb-8 ${oswald.className}`}>
+              Our projects are designed to create long-term impact, focusing on building the skills, networks, and resources that farmers need to succeed. Each initiative is tailored to the specific challenges faced by young farmers, smallholder communities, and marginalized groups.
+            </h2>
+            
+            {/* CTA Button */}
+            <button className="bg-green-111 text-black px-8 py-4 font-semibold text-lg transition-all duration-300 hover:bg-black hover:text-green-111 border border-transparent">
+              VIEW ALL PROJECTS
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
