@@ -1,10 +1,11 @@
 "use client";
 import { Oswald } from "next/font/google";
-import StickyHeader from "./components/header";
+import StickyHeader from "@/components/header";
+import AgricultureSection from "@/components/partnership-section";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from 'react';
-import { Users, Tractor, CreditCard, TrendingUp } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Users, Tractor, CreditCard, TrendingUp, Play } from 'lucide-react';
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -406,6 +407,7 @@ return (
           </div>
         </div>
       </section>
+      <AgricultureSection />
     </>
   );
 }
