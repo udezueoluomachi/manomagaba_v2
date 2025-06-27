@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Menu, X, Facebook, Twitter, Instagram, Mail, MapPin, Phone, Mic, Megaphone } from 'lucide-react';
 import {
   DropdownMenu,
@@ -17,17 +17,17 @@ const StickyHeader = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (window.scrollY / scrollHeight) * 100;
-      setScrollPercentage(scrolled);
-      setIsScrolled(window.scrollY > 50);
-    };
+  const handleScroll = useCallback(() => {
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / scrollHeight) * 100;
+    setScrollPercentage(scrolled);
+    setIsScrolled(window.scrollY > 50);
+  }, []);
 
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   const navigationItems = [
     { name: 'HOME', href: '/' },

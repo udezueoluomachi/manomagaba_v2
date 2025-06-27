@@ -162,13 +162,13 @@ return (
             {/* Brand Header */}
             <div className="mb-8">
               <div className="w-max">
-              <div className="w-full flex items-end">
-              <div className="w-4/12 h-1 bg-green-111 mb-4"></div>
-              <div className="w-8/12 h-[0.5px] bg-white/55 mb-4"></div>
-              </div>
-              <div className="text-green-111 text-lg font-bold mb-2">
-                MANOMA GABA
-              </div>
+                <div className="w-full flex items-end">
+                  <div className="w-4/12 h-1 bg-green-111 mb-4"></div>
+                  <div className="w-8/12 h-[0.5px] bg-white/55 mb-4"></div>
+                </div>
+                <div className="text-green-111 text-lg font-bold mb-2">
+                  MANOMA GABA
+                </div>
               </div>
               <div className="text-gray-200 text-sm max-w-2xl">
                 Bridging food security by frontiering the NextGen AgriLeaders, as well as empowering small holder farmers
