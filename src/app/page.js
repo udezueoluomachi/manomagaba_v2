@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from 'react';
 import { Users, Tractor, CreditCard, TrendingUp, Play } from 'lucide-react';
+import SubscribeSection from "@/components/subscribe-section";
+import Footer from "@/components/footer";
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -408,6 +410,20 @@ return (
         </div>
       </section>
       <AgricultureSection />
+      <section className="w-full min-h-[70vh] relative bg-fixed bg-center bg-cover bg-[url('/images/farmer-2021-09-04-11-42-50-utc.jpg')]">
+        <div className="absolute inset-0 flex items-center flex-col bg-black/40 text-white text-center px-4 py-36">
+          <div className="max-w-2xl">
+            <h2 className="text-sm font-bold uppercase tracking-wider ">Are you a skilled professional ?</h2>
+            <h3 className={"text-4xl font-medium mt-5 " + oswald.className}>CAREER OPORTUNITY</h3>
+            <p className="text-base font-normal mt-10">Join our team and contribute to building a sustainable future for agriculture. Discover available opportunities that allow you to make a difference while growing professionally.</p>
+            <Link href={"mailto:info@manomagaba.com"} className="text-base uppercase p-4 bg-green-111 hover:bg-black-111 block w-max mt-10 mx-auto md:px-10" >
+            SEND CV
+            </Link>
+          </div>
+        </div>
+      </section>
+      <SubscribeSection />
+      <Footer />
     </>
   );
 }
