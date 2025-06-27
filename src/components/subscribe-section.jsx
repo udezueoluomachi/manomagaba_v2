@@ -1,18 +1,24 @@
 import React from 'react';
+import { Oswald } from 'next/font/google';
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+})
 
 const SubscribeSection = () => {
   return (
     <section className="bg-green-111 py-16 px-4 md:px-8 lg:px-16 flex flex-col lg:flex-row items-center justify-center">
       <div className="text-white text-center lg:text-left mb-8 lg:mb-0 lg:mr-16 max-w-lg">
-        <h2 className="text-4xl font-bold mb-2 relative pb-4">
+        <h2 className={"text-3xl font-bold mb-2 relative pb-4 " + oswald.className}>
           Subscribe
-          <span className="absolute bottom-0 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-20 h-1 bg-white"></span>
+          <span className="absolute bottom-0 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-20 h-[0.5px] bg-white"></span>
         </h2>
         <p className="text-lg mt-4">
           Want to be notified about our News. Just sign up and we'll send you a notification by email.
         </p>
       </div>
-      <div className="flex flex-col sm:flex-row items-center w-full max-w-md sm:border-2 sm:border-white/40 border">
+      <div className="flex flex-col sm:flex-row items-center w-full max-w-md">
         <input
           type="email"
           placeholder="Your email"
