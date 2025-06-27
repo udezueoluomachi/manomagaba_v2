@@ -78,7 +78,7 @@ const AgricultureSection = () => {
                 <h2 className={"text-5xl lg:text-6xl font-bold " + oswald.className}>
                   Donate Now
                 </h2>
-                <button className="text-black-111 px-8 py-4 font-medium transition-all duration-300 transform translate-x-10 hover:scale-105 uppercase tracking-wide bg-green-111">
+                <button className="text-black-111 px-8 py-4 font-medium transition-all duration-300 transform md:translate-x-10 hover:scale-105 uppercase tracking-wide bg-green-111">
                   HELP US EMPOWER OTHERS
                 </button>
               </div>
@@ -144,7 +144,7 @@ const AgricultureSection = () => {
                       objectFit="cover"
                       className="absolute inset-0 z-0"
                     />
-                    <div className="relative z-10 text-center">
+                    <div className="relative z-10 text-center p-4">
                       <button
                         onClick={handlePlayClick}
                         className="group relative w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 mb-4 bg-green-111"
