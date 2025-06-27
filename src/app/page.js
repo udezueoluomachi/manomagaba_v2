@@ -390,7 +390,7 @@ return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl">
             {/* Section Label */}
-            <p className="text-green-500 text-sm font-medium tracking-wider uppercase mb-8">
+            <p className={"text-green-500 text-sm font-medium tracking-wider uppercase mb-8 " + oswald.className}>
               OUR PROJECTS
             </p>
             

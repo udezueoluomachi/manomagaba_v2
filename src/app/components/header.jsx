@@ -116,7 +116,7 @@ const StickyHeader = () => {
       {/* Main White Header - Always Sticky */}
       <header className="bg-white shadow-sm sticky top-0 z-50 header-white py-1">
         {/* Green Progress Bar at Top */}
-        <div className="fixed top-0 left-0 w-full h-1 bg-black/20 z-50">
+        <div className="fixed top-0 left-0 w-full h-[2px] bg-black/20 z-50">
           <div
             className="h-full bg-green-111 transition-all duration-300 ease-out"
             style={{ width: `${scrollPercentage}%` }}
