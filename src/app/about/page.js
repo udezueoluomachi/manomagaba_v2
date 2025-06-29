@@ -125,7 +125,7 @@ export default function AboutPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-leaf text-green-111 transition-colors duration-300 group-hover:text-black-111"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 18 2c1 2.4 2 5.4 1 8.5A6 6 0 0 1 12 21c-2.7 0-5.5-.7-7-2.7 1.5-1.7 2.7-3.7 3.2-5.8A8 8 0 0 0 11 20Z"/></svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>Sustainability</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>Longevity</h3>
                   <p className="text-gray-600">
                     Our commitment to sustainability drives us to create long-lasting impacts that extend beyond immediate results. We focus on empowering 1,000,000 young AgriLeaders and smallholder farmers with the skills and resources needed to sustain their livelihoods, adapt to climate change, and contribute to long-term food security. By promoting environmentally responsible practices, we ensure that our agricultural advancements benefit both present and future generations.
                   </p>
@@ -196,21 +196,21 @@ export default function AboutPage() {
           <h3 className="text-gray-500 tracking-widest text-sm font-semibold mb-2">LEADERSHIP</h3>
           <h2 className={`text-4xl md:text-5xl font-normal text-gray-800 ${oswald.className}`}>Board Of Directors</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto m-16">
           {teamMembers.map((member, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
               <div className="aspect-square overflow-hidden">
                 <img 
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6 text-center">
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">
                   {member.name}
                 </h3>
-                <p className="text-green-600 text-sm font-semibold uppercase tracking-wider mb-3">
+                <p className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-3">
                   {member.position}
                 </p>
               </div>
