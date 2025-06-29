@@ -132,6 +132,7 @@ const ManomaGabaLanding = () => {
       behavior: 'smooth'
     });
   };
+
 return (
     <>
       <StickyHeader />
@@ -319,18 +320,31 @@ return (
           </div>
         </div>
       </section>
-      <section className="w-full min-h-[80vh] relative bg-fixed bg-center bg-cover bg-[url('/images/farmer-2021-09-04-11-42-50-utc.jpg')]">
-        <div className="absolute inset-0 flex items-center flex-col bg-black/40 text-white text-center px-4 py-36">
-          <div className="max-w-2xl">
-            <h2 className="text-sm font-bold uppercase tracking-wider ">WHAT WE DO</h2>
-            <h3 className={"text-4xl font-medium mt-5 " + oswald.className}>We Are Helping Farmers Advance Their Agricultural Endeavours.</h3>
-            <p className="text-base font-normal mt-10">We focus on strengthening food security by empowering smallholder farmers and mentoring the next generation of agricultural leaders.</p>
-            <Link href={"#whatwedo"} className="text-base uppercase p-4 bg-green-111 hover:bg-black-111 block w-max mt-10 mx-auto md:px-10" >
-            LEARN MORE
-            </Link>
+
+      {/* Fixed Background Section 1 - What We Do */}
+      <section className="w-full relative bg-fixed bg-center bg-cover bg-[url('/images/farmer-2021-09-04-11-42-50-utc.jpg')]">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 flex items-center justify-center text-white text-center px-4 py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32">
+          <div className="max-w-2xl mx-auto space-y-6 md:space-y-8">
+            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-wider">WHAT WE DO</h2>
+            <h3 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight ${oswald.className}`}>
+              We Are Helping Farmers Advance Their Agricultural Endeavours.
+            </h3>
+            <p className="text-sm sm:text-base md:text-lg font-normal leading-relaxed px-4">
+              We focus on strengthening food security by empowering smallholder farmers and mentoring the next generation of agricultural leaders.
+            </p>
+            <div className="pt-4 md:pt-6">
+              <Link 
+                href={"#whatwedo"} 
+                className="inline-block text-sm sm:text-base uppercase px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-green-111 hover:bg-black-111 transition-colors duration-300 font-medium tracking-wide"
+              >
+                LEARN MORE
+              </Link>
+            </div>
           </div>
         </div>
       </section>
+
       <section id="whatwedo" className="relative">
         {/* Gray background section */}
         <div className="bg-gray-100 pt-16 pb-64">
@@ -410,18 +424,31 @@ return (
         </div>
       </section>
       <AgricultureSection />
-      <section className="w-full min-h-[70vh] relative bg-fixed bg-center bg-cover bg-[url('/images/farmer-2021-09-04-11-42-50-utc.jpg')]">
-        <div className="absolute inset-0 flex items-center flex-col bg-black/40 text-white text-center px-4 py-36">
-          <div className="max-w-2xl">
-            <h2 className="text-sm font-bold uppercase tracking-wider ">Are you a skilled professional ?</h2>
-            <h3 className={"text-4xl font-medium mt-5 " + oswald.className}>CAREER OPORTUNITY</h3>
-            <p className="text-base font-normal mt-10">Join our team and contribute to building a sustainable future for agriculture. Discover available opportunities that allow you to make a difference while growing professionally.</p>
-            <Link href={"mailto:info@manomagaba.com"} className="text-base uppercase p-4 bg-green-111 hover:bg-black-111 block w-max mt-10 mx-auto md:px-10" >
-            SEND CV
-            </Link>
+
+      {/* Fixed Background Section 2 - Career Opportunity */}
+      <section className="w-full relative bg-fixed bg-center bg-cover bg-[url('/images/farmer-2021-09-04-11-42-50-utc.jpg')]">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 flex items-center justify-center text-white text-center px-4 py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32">
+          <div className="max-w-2xl mx-auto space-y-6 md:space-y-8">
+            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-wider">Are you a skilled professional ?</h2>
+            <h3 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight ${oswald.className}`}>
+              CAREER OPPORTUNITY
+            </h3>
+            <p className="text-sm sm:text-base md:text-lg font-normal leading-relaxed px-4">
+              Join our team and contribute to building a sustainable future for agriculture. Discover available opportunities that allow you to make a difference while growing professionally.
+            </p>
+            <div className="pt-4 md:pt-6">
+              <Link 
+                href={"mailto:info@manomagaba.com"} 
+                className="inline-block text-sm sm:text-base uppercase px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-green-111 hover:bg-black-111 transition-colors duration-300 font-medium tracking-wide"
+              >
+                SEND CV
+              </Link>
+            </div>
           </div>
         </div>
       </section>
+
       <SubscribeSection />
       <Footer />
     </>
