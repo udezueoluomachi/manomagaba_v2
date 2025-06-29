@@ -206,20 +206,25 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="w-full min-h-[100vh] md:min-h-[70vh] relative bg-fixed bg-center bg-cover bg-[url('/images/farmer-2021-09-04-11-42-50-utc.jpg')]">
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <div className="text-white text-center px-4 py-8 max-w-5xl w-full">
-            <h2 className="text-sm font-bold uppercase tracking-wider">WHAT WE SEE</h2>
-            <h3 className={"text-3xl md:text-5xl font-normal mt-5 max-w-3xl mx-auto leading-tight " + oswald.className}>
+      
+      {/* Fixed responsive background section */}
+      <section className="w-full relative bg-fixed bg-center bg-cover bg-[url('/images/farmer-2021-09-04-11-42-50-utc.jpg')]">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 flex items-center justify-center px-4 py-16 sm:py-20 md:py-24 lg:py-32">
+          <div className="text-white text-center max-w-5xl w-full">
+            <h2 className="text-sm font-bold uppercase tracking-wider mb-4">WHAT WE SEE</h2>
+            <h3 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-tight max-w-4xl mx-auto mb-8 md:mb-12 ${oswald.className}`}>
               A Great Future, Powered By Innovative Technologies & Young Agricultural Leaders.
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-8 md:mt-10">
+            
+            {/* Responsive stats grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl md:text-6xl font-bold text-white mb-2">
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 md:mb-3">
                     {stat.number}
                   </div>
-                  <div className="text-xs md:text-sm font-medium tracking-wider text-green-400 bg-black bg-opacity-60 px-2 md:px-3 py-1 rounded">
+                  <div className="text-xs sm:text-sm font-medium tracking-wider text-green-400 bg-black/60 px-2 sm:px-3 py-1 rounded mx-auto inline-block">
                     {stat.label}
                   </div>
                 </div>
@@ -228,6 +233,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      
       <section className="px-4 lg:px-36 py-16">
         <div className="text-center mb-12">
           <h3 className="text-gray-500 tracking-widest text-sm font-semibold mb-2">LEADERSHIP</h3>
