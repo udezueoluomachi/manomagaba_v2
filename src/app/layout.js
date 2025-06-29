@@ -11,6 +11,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+});
+
 
 export const metadata = {
   title: "Manoma Gaba",
@@ -21,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-all `}
+        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased transition-all `}
       >
         {children}
       </body>

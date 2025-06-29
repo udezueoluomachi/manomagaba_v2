@@ -165,7 +165,7 @@ const StickyHeader = () => {
                         key={item.name}
                         href={item.href}
                         className={`block px-4 py-3 transition-colors font-medium ${
-                          item.name === 'HOME' ? 'text-green-111' : 'text-white hover:text-green-111'
+                          pathname === item.href ? 'text-green-111' : 'text-white hover:text-green-111'
                         }`}
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
