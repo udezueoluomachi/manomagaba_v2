@@ -142,7 +142,7 @@ export default function AboutPage() {
         </h2>
       </section>
       <section className="px-4 lg:px-36 py-16 bg-white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start lg:px-10">
           <div className="relative">
             <img src="/images/founder.jpeg" alt="Udezue Chetachukwu" className="w-full h-auto shadow-lg" />
             <div className="absolute bottom-0 left-0 bg-green-111 text-black-111 px-6 py-3 flex items-center space-x-2">
@@ -151,21 +151,58 @@ export default function AboutPage() {
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-quote"><path d="M3 21c3 0 7-1 7-8V5c0-1.1-.9-2-2-2H3c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h2c2 0 5 1 5 4"/><path d="M15 21c3 0 7-1 7-8V5c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h2c2 0 5 1 5 4"/></svg>
             </div>
           </div>
-          <div>
-              <h3 className={`text-green-111 text-sm font-semibold mb-2 ${oswald.className}`}>MEET THE FOUNDER</h3>
-            <h2 className={`text-4xl font-bold text-gray-800 mb-6 ${oswald.className}`}>From The Founder's Desk</h2>
-            <p className="text-gray-800 font-semibold mb-4">
-              Money makes the world go round, but without farmers as the backbone of the economy, most people won't be alive to make or spend money.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              It all started with a simple belief: that everyone, regardless of their background or circumstances, deserves access to healthy affordable food and farmers, the power to cultivate their own prosperity. Witnessing the struggles of smallholder farmers firsthand, the heartbreaking labor often yielding meager returns, ignited a fire within me. I knew I had to do something, to bridge the gap between potential and reality.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              From humble beginnings, we've blossomed into a force for positive change. We empower farmers with the knowledge, tools, and resources they need to thrive. We train them in sustainable & innovative farming practices, connect them to markets, and advocate for their rights. The journey hasn't been easy. There have been challenges, setbacks, and moments of doubt. But every time I see a farmer's face light up with newfound confidence, with renewed hope for a better risk reward ratio, it fuels my determination.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              Born not from privilege, but from the stark reality of hunger, Manoma Gaba is more than an NGO; it's a revolution. We don't just assist farmers in cultivating crops; we assist them in cultivating a better mindset. We see, not just farmers of the future, but young agricultural innovators, eyes gleaming with the promise of a brighter tomorrow.
-            </p>
+          <div className="max-w-4xl mx-auto px-4 py-8">
+            <h3 className="text-green-600 text-sm font-semibold mb-2 uppercase tracking-wider">
+              MEET THE FOUNDER
+            </h3>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              From The Founder's Desk
+            </h2>
+            
+            <div className="space-y-6 text-gray-700 leading-relaxed">
+              <p className="text-gray-800 font-semibold text-lg">
+                <strong>Money makes the world go round, but without farmers as the backbone of the economy, most people won't be alive to make or spend money.</strong>
+              </p>
+              
+              <p>
+                It all started with a simple belief: that everyone, regardless of their background or circumstances, deserves access to healthy affordable food and farmers, the power to cultivate their own prosperity. Witnessing the struggles of smallholder farmers firsthand, the backbreaking labor often yielding meager returns, ignited a fire within me. I knew I had to do something, to bridge the gap between potential and reality.
+              </p>
+              
+              <p>
+                From humble beginnings, we've blossomed into a force for positive change. We empower farmers with the knowledge, tools, and resources they need to thrive. We train them in sustainable & innovative farming practices, connect them to markets, and advocate for their rights. The journey hasn't been easy. There have been challenges, setbacks, and moments of doubt. But every time I see a farmer's face light up with newfound confidence, with renewed hope for a better risk reward ratio, it fuels my determination.
+              </p>
+              
+              <p>
+                Born not from privilege, but from the stark reality of hunger, Manoma Gaba is more than an NGO; it's a revolution. We don't just assist farmers in cultivating crops; we assist them in cultivating a better mindset. We see, not just farmers of the future, but young agricultural innovators, eyes gleaming with the promise of a secure and sustainable future beyond the farm fields.
+              </p>
+              
+              <p>
+                The vision that sparked Manoma Gaba was born from experience in the sweat-soaked fields where I toiled as a child. Witnessing the backbreaking labor yield meager returns, the helplessness of watching seasons of drought without hope, ignited a fire within me. I knew change wasn't just necessary, it was urgent.
+              </p>
+              
+              <p>
+                Manoma Gaba has just sprouted but we are growing a network of vibrant youth hubs, each a fertile ground for ideas to flourish. Here, the digital and the traditional farmers mingle, as young minds adopt innovation like mastering drones and hydroponics, weaving technology with tradition. They learn not just to grow crops, but to grow businesses, to become agripreneurs, the architects of a sustainable future.
+              </p>
+              
+              <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-600 my-8">
+                <h4 className="text-xl font-bold text-gray-800 mb-4 uppercase tracking-wide">
+                  THE ROAD AHEAD:
+                </h4>
+                <div className="space-y-4">
+                  <p>
+                    Our journey is far from over. The challenges of climate change, poverty, financial inclusion and inequality remain. But with each passing day, I see the seeds of hope we've sown taking root. I see farmers adopting climate-smart practices, I see women claiming their rightful place in the agricultural landscape, I see young people embracing technology to revolutionize the sector.
+                  </p>
+                  
+                  <p>
+                    From my desk, I watch the future unfold, a future where Nigerian agriculture thrives, not just for survival, but for prosperity. A future where the fields teem with life, not just crops, but with the dreams and aspirations of a nation. And I know, with unwavering certainty, that together, we can cultivate that future, one seed at a time.
+                  </p>
+                  
+                  <p>
+                    Stay tuned for more stories from the field, updates on our projects, and ways you can get involved in our mission. Remember, even the smallest contribution can make a world of difference.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

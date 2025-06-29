@@ -32,7 +32,6 @@ const StickyHeader = () => {
   const navigationItems = [
     { name: 'HOME', href: '/' },
     { name: 'ABOUT US', href: '/about' },
-    { name: 'RESOURCES', href: '/resources' },
   ];
 
   return (
@@ -126,7 +125,7 @@ const StickyHeader = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-3 py-4">
-              <Image src={'/images/logo.png'} width={120} height={50} alt="Logo" />
+              <Image src={'/images/logo.png'} width={120} height={50} alt="Logo" style={{width: 'auto'}} />
             </div>
 
             {/* Desktop Navigation */}
