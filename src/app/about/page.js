@@ -9,12 +9,33 @@ const oswald = Oswald({
   subsets: ["latin"],
 });
 
+const stats = [
+    { number: "1", label: "MILLION YOUTHS" },
+    { number: "15", label: "BILLION SEED CAPITAL" },
+    { number: "100", label: "PROJECTS" },
+    { number: "7", label: "CITIES" }
+  ];
+
+const teamMembers = [
+  {
+    name: "Udezue Chetachkwu",
+    position: "Founder",
+    image: "/images/founder.jpeg", 
+  },
+  {
+    name: "Rotimi Williams", 
+    position: "Advisory",
+    image: "/images/advisory.jpg",
+    bio: "Agricultural expert bringing field experience and strategic guidance"
+  }
+];
+
 export default function AboutPage() {
   return (
     <div>
       <Header />
       <main>
-        <div className="px-4 lg:px-36 py-24 bg-gray-300">
+        <div className="px-4 lg:px-36 py-24 bg-gray-200">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h3 className="text-green-111 text-sm font-semibold mb-2" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>ABOUT MANOMA GABA</h3>
@@ -116,7 +137,7 @@ export default function AboutPage() {
       </main>
       <section className="bg-black-111 text-white px-4 lg:px-36 py-16">
               <h3 className="text-green-111 text-sm font-semibold mb-4">MANAGEMENT</h3>
-        <h2 className="text-3xl md:text-4xl font-bold leading-tight" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>
+        <h2 className="text-3xl md:text-4xl font-medium leading-tight" style={{ fontFamily: oswald.style.fontFamily}}>
           Our leadership team is composed of seasoned professionals with expertise in agriculture, sustainability, and social enterprise. Their collective experience and expertise ensures our initiatives are impactful, scalable, and aligned with global climate action.
         </h2>
       </section>
@@ -148,38 +169,53 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <section className="w-full min-h-[100vh] md:min-h-[70vh] relative bg-fixed bg-center bg-cover bg-[url('/images/farmer-2021-09-04-11-42-50-utc.jpg')]">
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <div className="text-white text-center px-4 py-8 max-w-5xl w-full">
+            <h2 className="text-sm font-bold uppercase tracking-wider">WHAT WE SEE</h2>
+            <h3 className={"text-3xl md:text-5xl font-normal mt-5 max-w-3xl mx-auto leading-tight " + oswald.className}>
+              A Great Future, Powered By Innovative Technologies & Young Agricultural Leaders.
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-8 md:mt-10">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl md:text-6xl font-bold text-white mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-xs md:text-sm font-medium tracking-wider text-green-400 bg-black bg-opacity-60 px-2 md:px-3 py-1 rounded">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="px-4 lg:px-36 py-16">
         <div className="text-center mb-12">
-          <h3 className="text-green-111 text-sm font-semibold mb-2">OUR TEAM</h3>
-          <h2 className={`text-4xl font-bold text-gray-800 ${oswald.className}`}>Meet Our Dedicated Team</h2>
+          <h3 className="text-gray-500 tracking-widest text-sm font-semibold mb-2">LEADERSHIP</h3>
+          <h2 className={`text-4xl md:text-5xl font-normal text-gray-800 ${oswald.className}`}>Board Of Directors</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Placeholder for team members - add actual content here if available */}
-          <div className="bg-white p-6 shadow-md text-center group">
-            <div className="w-32 h-32 bg-gray-200 mx-auto mb-4 flex items-center justify-center text-gray-500 transition-colors duration-300 group-hover:bg-green-111">
-              {/* Placeholder for image */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-user transition-colors duration-300 group-hover:text-black-111"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-green-600 text-sm font-semibold uppercase tracking-wider mb-3">
+                  {member.position}
+                </p>
+              </div>
             </div>
-            <h3 className="text-xl font-semibold text-gray-800 ${oswald.className}">Team Member Name</h3>
-            <p className="text-green-111 text-sm">Position</p>
-            <p className="text-gray-600 mt-2">Short bio or description of their role.</p>
-          </div>
-          <div className="bg-white p-6 shadow-md text-center group">
-            <div className="w-32 h-32 bg-gray-200 mx-auto mb-4 flex items-center justify-center text-gray-500 transition-colors duration-300 group-hover:bg-green-111">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-user transition-colors duration-300 group-hover:text-black-111"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-800 ${oswald.className}">Team Member Name</h3>
-            <p className="text-green-111 text-sm">Position</p>
-            <p className="text-gray-600 mt-2">Short bio or description of their role.</p>
-          </div>
-          <div className="bg-white p-6 shadow-md text-center group">
-            <div className="w-32 h-32 bg-gray-200 mx-auto mb-4 flex items-center justify-center text-gray-500 transition-colors duration-300 group-hover:bg-green-111">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-user transition-colors duration-300 group-hover:text-black-111"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <h3 className={`text-xl font-semibold text-gray-800 ${oswald.className}`}>Team Member Name</h3>
-            <p className="text-green-111 text-sm">Position</p>
-            <p className="text-gray-600 mt-2">Short bio or description of their role.</p>
-          </div>
+          ))}
         </div>
       </section>
       <SubscribeSection />

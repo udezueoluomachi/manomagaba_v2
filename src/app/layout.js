@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased transition-all `}
+        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} scroll-smooth antialiased transition-all `}
       >
         {children}
       </body>
