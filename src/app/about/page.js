@@ -17,8 +17,8 @@ export default function AboutPage() {
         <div className="px-4 lg:px-36 py-24 bg-gray-300">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-green-111 text-sm font-semibold mb-2">ABOUT MANOMA GABA</h3>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6 font-oswald">Who We Are</h2>
+              <h3 className="text-green-111 text-sm font-semibold mb-2" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>ABOUT MANOMA GABA</h3>
+              <h2 className={`text-4xl font-bold text-gray-800 mb-6 ${oswald.className}`}>Who We Are</h2>
               <p className="text-gray-600 leading-relaxed">
                 Manoma Gaba is a non-profit social enterprise committed to shaping the future of agriculture in Nigeria. At Manoma Gaba, we are dedicated to creating a ripple effect, with millions of young agricultural innovators and resilient smallholder farmers leading the transformation of Nigeria's agriculture sector. They will not only feed the nation but also drive climate-smart practices, strengthen food security, and contribute to global efforts in achieving sustainable agriculture and climate resilience.
               </p>
@@ -29,7 +29,7 @@ export default function AboutPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-eye text-white transition-colors duration-300 group-hover:text-green-111"><path d="M2.06 13C3.4 17.7 7.8 21 12 21c4.2 0 8.6-3.3 9.94-8C20.6 8.3 16.2 5 12 5c-4.2 0-8.6 3.3-9.94 8Z"/><circle cx="12" cy="13" r="3"/></svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 font-oswald">Our Vision</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>Our Vision</h3>
                   <p className="text-gray-600">
                     A Nigeria where young AgriLeaders and empowered smallholder farmers transform traditional agriculture into thriving, climate-resilient commercial enterprises.
                   </p>
@@ -41,7 +41,7 @@ export default function AboutPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-target text-white transition-colors duration-300 group-hover:text-green-111"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 font-oswald">Our Mission</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>Our Mission</h3>
                   <p className="text-gray-600">
                     To empower 1,000,000 young people to be innovative leaders in agriculture, and to promote climate-smart agriculture and food security in Nigeria.
                   </p>
@@ -55,8 +55,8 @@ export default function AboutPage() {
         <div className="px-4 lg:px-36 py-16 bg-gray-100">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-green-111 text-sm font-semibold mb-2">OUR CORE VALUES</h3>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6 font-oswald">Values & Culture</h2>
+              <h3 className={`text-green-111 text-sm font-semibold mb-2 ${oswald.className}`}>OUR CORE VALUES</h3>
+              <h2 className="text-4xl font-bold text-gray-800 mb-6" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>Values & Culture</h2>
               <p className="text-gray-600 leading-relaxed">
                 At Manoma Gaba, our ethics, activities, and conduct are driven by a unique set of values that define who we are and how we operate. These values guide our mission to transform agriculture in Nigeria by empowering the next generation of AgriLeaders and supporting smallholder farmers to thrive in a changing climate.
               </p>
@@ -68,7 +68,7 @@ export default function AboutPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-align-justify text-green-111 transition-colors duration-300 group-hover:text-black-111"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 font-oswald">Integrity</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>Integrity</h3>
                   <p className="text-gray-600">
                     We are committed to the highest standards of honesty and transparency in all our engagements. Integrity is the foundation of our relationships with partners, stakeholders, and the communities we serve. By upholding these principles, we build trust and credibility, ensuring that our mission to foster agricultural innovation is achieved with accountability and respect.
                   </p>
@@ -80,7 +80,7 @@ export default function AboutPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-lightbulb text-green-111 transition-colors duration-300 group-hover:text-black-111"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 6c0 1.8-.7 3.4-1.8 4.7C2.9 11.9 2 13.2 2 15c0 2.7 2 5 5 5h6c2.2 0 4-1.8 4-4Z"/><path d="M2 15h16"/><path d="M7 20v2"/><path d="M13 20v2"/></svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 font-oswald">Innovation</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>Innovation</h3>
                   <p className="text-gray-600">
                     Innovation is at the heart of our mission. We empower young people to develop and adopt new technologies and practices that enhance agricultural productivity while minimizing environmental impact. By fostering creativity and forward-thinking solutions, we aim to modernize farming practices, improve livelihoods, and contribute to a resilient and prosperous agricultural sector.
                   </p>
@@ -92,7 +92,7 @@ export default function AboutPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-users text-green-111 transition-colors duration-300 group-hover:text-black-111"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 font-oswald">Collaboration</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>Collaboration</h3>
                   <p className="text-gray-600">
                     We believe that collaboration is key to creating lasting change. By working closely with government agencies, academic institutions, the private sector, and civil society, we create a network of support for young agricultural innovators and smallholder farmers. Through these partnerships, we foster knowledge exchange, leverage resources, and promote climate-smart agriculture to strengthen food security in Nigeria.
                   </p>
@@ -104,7 +104,7 @@ export default function AboutPage() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-leaf text-green-111 transition-colors duration-300 group-hover:text-black-111"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 18 2c1 2.4 2 5.4 1 8.5A6 6 0 0 1 12 21c-2.7 0-5.5-.7-7-2.7 1.5-1.7 2.7-3.7 3.2-5.8A8 8 0 0 0 11 20Z"/></svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 font-oswald">Sustainability</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>Sustainability</h3>
                   <p className="text-gray-600">
                     Our commitment to sustainability drives us to create long-lasting impacts that extend beyond immediate results. We focus on empowering 1,000,000 young AgriLeaders and smallholder farmers with the skills and resources needed to sustain their livelihoods, adapt to climate change, and contribute to long-term food security. By promoting environmentally responsible practices, we ensure that our agricultural advancements benefit both present and future generations.
                   </p>
@@ -116,7 +116,7 @@ export default function AboutPage() {
       </main>
       <section className="bg-black-111 text-white px-4 lg:px-36 py-16">
               <h3 className="text-green-111 text-sm font-semibold mb-4">MANAGEMENT</h3>
-        <h2 className="text-3xl md:text-4xl font-bold leading-tight font-oswald">
+        <h2 className="text-3xl md:text-4xl font-bold leading-tight" style={{ fontFamily: oswald.style.fontFamily, fontWeight: 'bold' }}>
           Our leadership team is composed of seasoned professionals with expertise in agriculture, sustainability, and social enterprise. Their collective experience and expertise ensures our initiatives are impactful, scalable, and aligned with global climate action.
         </h2>
       </section>
@@ -131,8 +131,8 @@ export default function AboutPage() {
             </div>
           </div>
           <div>
-            <h3 className="text-green-111 text-sm font-semibold mb-2">MEET THE FOUNDER</h3>
-            <h2 className="text-4xl font-bold text-gray-800 mb-6 font-oswald">From The Founder's Desk</h2>
+              <h3 className={`text-green-111 text-sm font-semibold mb-2 ${oswald.className}`}>MEET THE FOUNDER</h3>
+            <h2 className={`text-4xl font-bold text-gray-800 mb-6 ${oswald.className}`}>From The Founder's Desk</h2>
             <p className="text-gray-800 font-semibold mb-4">
               Money makes the world go round, but without farmers as the backbone of the economy, most people won't be alive to make or spend money.
             </p>
@@ -151,7 +151,7 @@ export default function AboutPage() {
       <section className="px-4 lg:px-36 py-16">
         <div className="text-center mb-12">
           <h3 className="text-green-111 text-sm font-semibold mb-2">OUR TEAM</h3>
-          <h2 className="text-4xl font-bold text-gray-800 font-oswald">Meet Our Dedicated Team</h2>
+          <h2 className={`text-4xl font-bold text-gray-800 ${oswald.className}`}>Meet Our Dedicated Team</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Placeholder for team members - add actual content here if available */}
@@ -160,7 +160,7 @@ export default function AboutPage() {
               {/* Placeholder for image */}
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-user transition-colors duration-300 group-hover:text-black-111"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
-            <h3 className="text-xl font-semibold text-gray-800 font-oswald">Team Member Name</h3>
+            <h3 className="text-xl font-semibold text-gray-800 ${oswald.className}">Team Member Name</h3>
             <p className="text-green-111 text-sm">Position</p>
             <p className="text-gray-600 mt-2">Short bio or description of their role.</p>
           </div>
@@ -168,7 +168,7 @@ export default function AboutPage() {
             <div className="w-32 h-32 bg-gray-200 mx-auto mb-4 flex items-center justify-center text-gray-500 transition-colors duration-300 group-hover:bg-green-111">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-user transition-colors duration-300 group-hover:text-black-111"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
-            <h3 className="text-xl font-semibold text-gray-800 font-oswald">Team Member Name</h3>
+            <h3 className="text-xl font-semibold text-gray-800 ${oswald.className}">Team Member Name</h3>
             <p className="text-green-111 text-sm">Position</p>
             <p className="text-gray-600 mt-2">Short bio or description of their role.</p>
           </div>
@@ -176,7 +176,7 @@ export default function AboutPage() {
             <div className="w-32 h-32 bg-gray-200 mx-auto mb-4 flex items-center justify-center text-gray-500 transition-colors duration-300 group-hover:bg-green-111">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-user transition-colors duration-300 group-hover:text-black-111"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
-            <h3 className="text-xl font-semibold text-gray-800 font-oswald">Team Member Name</h3>
+            <h3 className={`text-xl font-semibold text-gray-800 ${oswald.className}`}>Team Member Name</h3>
             <p className="text-green-111 text-sm">Position</p>
             <p className="text-gray-600 mt-2">Short bio or description of their role.</p>
           </div>
